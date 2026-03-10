@@ -35,34 +35,40 @@ const Navbar = () => {
         }
       });
     });
+
     window.addEventListener("resize", () => {
       ScrollSmoother.refresh(true);
     });
   }, []);
+
   return (
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          RC
+          EDHAA
         </a>
+
         <a
-          href="mailto:rajeshchittyal21@gmail.com"
+          href="mailto:hello@edhaa.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          rajeshchittyal21@gmail.com
+          hello@edhaa.com
         </a>
+
         <ul>
           <li>
             <a data-href="#about" href="#about">
               <HoverLinks text="ABOUT" />
             </a>
           </li>
+
           <li>
             <a data-href="#work" href="#work">
-              <HoverLinks text="WORK" />
+              <HoverLinks text="ACTIVITIES" />
             </a>
           </li>
+
           <li>
             <a data-href="#contact" href="#contact">
               <HoverLinks text="CONTACT" />

@@ -7,6 +7,7 @@ const WhatIDo = () => {
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
   };
+
   useEffect(() => {
     if (ScrollTrigger.isTouch) {
       containerRef.current.forEach((container) => {
@@ -24,128 +25,95 @@ const WhatIDo = () => {
       });
     };
   }, []);
+
   return (
     <div className="whatIDO">
       <div className="what-box">
         <h2 className="title">
-          W<span className="hat-h2">HAT</span>
+          O<span className="hat-h2">UR</span>
           <div>
-            I<span className="do-h2"> DO</span>
+            A<span className="do-h2">CTIVITIES</span>
           </div>
         </h2>
       </div>
+
       <div className="what-box">
         <div className="what-box-in">
+
           <div className="what-border2">
             <svg width="100%">
-              <line
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="100%"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="7,7"
-              />
-              <line
-                x1="100%"
-                y1="0"
-                x2="100%"
-                y2="100%"
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray="7,7"
-              />
+              <line x1="0" y1="0" x2="0" y2="100%" stroke="white" strokeWidth="2" strokeDasharray="7,7"/>
+              <line x1="100%" y1="0" x2="100%" y2="100%" stroke="white" strokeWidth="2" strokeDasharray="7,7"/>
             </svg>
           </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 0)}
-          >
+
+          {/* Activity 1 */}
+          <div className="what-content what-noTouch" ref={(el) => setRef(el, 0)}>
             <div className="what-border1">
               <svg height="100%">
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="100%"
-                  y2="0"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
+                <line x1="0" y1="0" x2="100%" y2="0" stroke="white" strokeWidth="2" strokeDasharray="6,6"/>
+                <line x1="0" y1="100%" x2="100%" y2="100%" stroke="white" strokeWidth="2" strokeDasharray="6,6"/>
               </svg>
             </div>
+
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>FRONTEND</h3>
-              <h4>Building Interactive UIs</h4>
+              <h3>CREATIVE ARTS</h3>
+              <h4>Hands-on Artistic Exploration</h4>
               <p>
-                Crafting performant, responsive interfaces with modern frameworks.
-                From SPAs to micro-frontends, I deliver pixel-perfect experiences.
+                Kids explore painting, drawing, crafts, and creative design.
+                These activities encourage imagination, creativity, and
+                self-expression in a fun environment.
               </p>
-              <h5>Skillset & tools</h5>
+
+              <h5>Activities</h5>
               <div className="what-content-flex">
-                <div className="what-tags">React.js</div>
-                <div className="what-tags">Angular</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">Material UI</div>
-                <div className="what-tags">HTML5</div>
-                <div className="what-tags">CSS3</div>
+                <div className="what-tags">Painting</div>
+                <div className="what-tags">Drawing</div>
+                <div className="what-tags">DIY Crafts</div>
+                <div className="what-tags">Paper Art</div>
+                <div className="what-tags">Clay Modeling</div>
+                <div className="what-tags">Creative Design</div>
               </div>
+
               <div className="what-arrow"></div>
             </div>
           </div>
-          <div
-            className="what-content what-noTouch"
-            ref={(el) => setRef(el, 1)}
-          >
+
+          {/* Activity 2 */}
+          <div className="what-content what-noTouch" ref={(el) => setRef(el, 1)}>
             <div className="what-border1">
               <svg height="100%">
-                <line
-                  x1="0"
-                  y1="100%"
-                  x2="100%"
-                  y2="100%"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeDasharray="6,6"
-                />
+                <line x1="0" y1="100%" x2="100%" y2="100%" stroke="white" strokeWidth="2" strokeDasharray="6,6"/>
               </svg>
             </div>
+
             <div className="what-corner"></div>
+
             <div className="what-content-in">
-              <h3>BACKEND</h3>
-              <h4>Scalable Server Architecture</h4>
+              <h3>DISCOVERY & LEARNING</h3>
+              <h4>Fun Educational Experiences</h4>
               <p>
-                Designing robust APIs and microservices. From CMS platforms to
-                complex business logic, I build backends that scale.
+                Interactive storytelling, nature walks, and learning games
+                designed to spark curiosity and help kids explore the world
+                around them.
               </p>
-              <h5>Skillset & tools</h5>
+
+              <h5>Activities</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">NestJS</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">MongoDB</div>
-                <div className="what-tags">PostgreSQL</div>
-                <div className="what-tags">REST APIs</div>
-                <div className="what-tags">Microservices</div>
-                <div className="what-tags">Python</div>
+                <div className="what-tags">Storytelling</div>
+                <div className="what-tags">Nature Walks</div>
+                <div className="what-tags">Team Games</div>
+                <div className="what-tags">Creative Thinking</div>
+                <div className="what-tags">Problem Solving</div>
+                <div className="what-tags">Group Activities</div>
               </div>
+
               <div className="what-arrow"></div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -157,6 +125,7 @@ export default WhatIDo;
 function handleClick(container: HTMLDivElement) {
   container.classList.toggle("what-content-active");
   container.classList.remove("what-sibling");
+
   if (container.parentElement) {
     const siblings = Array.from(container.parentElement.children);
 
